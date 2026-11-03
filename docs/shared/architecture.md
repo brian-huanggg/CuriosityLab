@@ -510,8 +510,12 @@ CuriosityLab/
 │   └── envs/lab/values-*.yaml
 ├── docs/                         # This folder: internal, English
 ├── site/                         # Public book, VitePress, zh-TW first
+├── scripts/changelog.sh          # Per-deployable changelog (ADR-SHARED-0014)
+├── cliff.toml                    # git-cliff config shared by all deployables
 └── .gitlab-ci.yml
 ```
+
+Each deployable (`backend/auth-server`, `backend/bff`, `backend/platform`, `web`) has a generated `CHANGELOG.md` and its own tags `<deployable>/v<semver>` ([ADR-SHARED-0014](adr/0014-changelogs-per-deployable-with-git-cliff.md)).
 
 ---
 
@@ -534,6 +538,7 @@ See [`adr/README.md`](adr/README.md).
 | [0011](adr/0011-kubernetes-namespaces.md) | Kubernetes namespaces | Accepted |
 | [0012](adr/0012-observability-with-grafana-stack.md) | Observability with the Grafana stack | Accepted (Grafana stack) / Proposed (components) |
 | [0013](adr/0013-react-for-all-user-interfaces.md) | React for all user interfaces | Accepted |
+| [0014](adr/0014-changelogs-per-deployable-with-git-cliff.md) | Changelogs per deployable with git-cliff | Accepted (git-cliff per deployable) / Proposed (tag scheme, commit linting) |
 
 ---
 
