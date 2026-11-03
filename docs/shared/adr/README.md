@@ -26,6 +26,7 @@ Cross-cutting decisions for CuriosityLab, one file per decision (`NNNN-kebab-cas
 | [0011](0011-kubernetes-namespaces.md) | Kubernetes namespaces | Accepted |
 | [0012](0012-observability-with-grafana-stack.md) | Observability with the Grafana stack | Accepted (Grafana stack) / Proposed (components) |
 | [0013](0013-react-for-all-user-interfaces.md) | React for all user interfaces | Accepted |
+| [0014](0014-changelogs-per-deployable-with-git-cliff.md) | Changelogs per deployable with git-cliff | Accepted (git-cliff per deployable) / Proposed (tag scheme, commit linting) |
 
 ## Related documents
 
