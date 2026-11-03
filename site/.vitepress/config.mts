@@ -21,15 +21,7 @@ export default withMermaid(
     },
 
     themeConfig: {
-      nav: [{ text: '開始閱讀', link: '/guide/' }],
-      sidebar: {
-        '/guide/': [
-          {
-            text: '開始',
-            items: [{ text: '本書簡介', link: '/guide/' }],
-          },
-        ],
-      },
+      nav: [{ text: '書籍架構', link: '/syllabus' }],
       outline: { label: '本頁目錄' },
       docFooter: { prev: '上一頁', next: '下一頁' },
       lastUpdated: { text: '最後更新' },
