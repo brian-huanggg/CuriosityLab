@@ -13,6 +13,13 @@ export default withMermaid(
     // Set BASE when hosted under a sub-path, e.g. BASE=/curiositylab/
     base: process.env.BASE ?? '/',
 
+    // Under pnpm, mermaid is not pre-bundled, so its CommonJS deps (dayjs, fastdom, …)
+    // reach the browser raw and fail with "does not provide an export named 'default'",
+    // leaving a blank page. Pre-bundling mermaid converts all of them at once.
+    vite: {
+      optimizeDeps: { include: ['mermaid'] },
+    },
+
     themeConfig: {
       nav: [{ text: '開始閱讀', link: '/guide/' }],
       sidebar: {
